@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackupTool", "VsoBackupTool\VsoBackupTool.csproj", "{6773A0C5-C07F-4B8B-9DDA-EA8CE48D85BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.Configuration", "VsoBackup.Configuration\VsoBackup.Configuration.csproj", "{28306310-E626-4B6B-BA80-153B2DA78ADF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.Services", "VsoBackup.Services\VsoBackup.Services.csproj", "{37E429B6-77FB-4E49-B570-367F4D3A6FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.DependencyInjection", "VsoBackup.DependencyInjection\VsoBackup.DependencyInjection.csproj", "{25B02B94-5CCB-40BB-A0D9-FA36CCBE17A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.VisualStudioOnline", "VsoBackup.VisualStudioOnline\VsoBackup.VisualStudioOnline.csproj", "{E9392286-D88A-4C77-AB43-44E9F72A62AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.Models", "VsoBackup.Models\VsoBackup.Models.csproj", "{5BED5D8B-5CED-4224-9853-A20A86A88838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.Utilities", "VsoBackup.Utilities\VsoBackup.Utilities.csproj", "{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.Logging", "VsoBackup.Logging\VsoBackup.Logging.csproj", "{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{4964DB98-6EFF-4875-98BE-691F991DD0D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NativeBinaries", "NativeBinaries", "{40660A8E-A593-4418-8DC1-13C3869BFD32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "amd64", "amd64", "{0505756C-68DE-45FE-98AD-9F9C5FAC34CB}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\NativeBinaries\amd64\git2-e0902fb.dll = Assemblies\NativeBinaries\amd64\git2-e0902fb.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{A36E63C5-89F9-4E8A-8174-5494EDF76D65}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\NativeBinaries\x86\git2-e0902fb.dll = Assemblies\NativeBinaries\x86\git2-e0902fb.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6773A0C5-C07F-4B8B-9DDA-EA8CE48D85BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6773A0C5-C07F-4B8B-9DDA-EA8CE48D85BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6773A0C5-C07F-4B8B-9DDA-EA8CE48D85BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6773A0C5-C07F-4B8B-9DDA-EA8CE48D85BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28306310-E626-4B6B-BA80-153B2DA78ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28306310-E626-4B6B-BA80-153B2DA78ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28306310-E626-4B6B-BA80-153B2DA78ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28306310-E626-4B6B-BA80-153B2DA78ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E429B6-77FB-4E49-B570-367F4D3A6FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E429B6-77FB-4E49-B570-367F4D3A6FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E429B6-77FB-4E49-B570-367F4D3A6FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E429B6-77FB-4E49-B570-367F4D3A6FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25B02B94-5CCB-40BB-A0D9-FA36CCBE17A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B02B94-5CCB-40BB-A0D9-FA36CCBE17A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B02B94-5CCB-40BB-A0D9-FA36CCBE17A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B02B94-5CCB-40BB-A0D9-FA36CCBE17A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9392286-D88A-4C77-AB43-44E9F72A62AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9392286-D88A-4C77-AB43-44E9F72A62AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9392286-D88A-4C77-AB43-44E9F72A62AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9392286-D88A-4C77-AB43-44E9F72A62AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BED5D8B-5CED-4224-9853-A20A86A88838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BED5D8B-5CED-4224-9853-A20A86A88838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BED5D8B-5CED-4224-9853-A20A86A88838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BED5D8B-5CED-4224-9853-A20A86A88838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40660A8E-A593-4418-8DC1-13C3869BFD32} = {4964DB98-6EFF-4875-98BE-691F991DD0D4}
+		{0505756C-68DE-45FE-98AD-9F9C5FAC34CB} = {40660A8E-A593-4418-8DC1-13C3869BFD32}
+		{A36E63C5-89F9-4E8A-8174-5494EDF76D65} = {40660A8E-A593-4418-8DC1-13C3869BFD32}
+	EndGlobalSection
+EndGlobal

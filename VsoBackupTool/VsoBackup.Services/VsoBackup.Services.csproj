@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props" Condition="Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37E429B6-77FB-4E49-B570-367F4D3A6FFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VsoBackup.Services</RootNamespace>
+    <AssemblyName>VsoBackup.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LibGit2Sharp">
+      <HintPath>..\packages\LibGit2Sharp.0.21.0.176\lib\net40\LibGit2Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileSystemService.cs" />
+    <Compile Include="GitService.cs" />
+    <Compile Include="IFileSystemService.cs" />
+    <Compile Include="IGitService.cs" />
+    <Compile Include="ISourceControlBackupService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SourceControlBackupService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VsoBackup.Configuration\VsoBackup.Configuration.csproj">
+      <Project>{28306310-E626-4B6B-BA80-153B2DA78ADF}</Project>
+      <Name>VsoBackup.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VsoBackup.Logging\VsoBackup.Logging.csproj">
+      <Project>{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}</Project>
+      <Name>VsoBackup.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VsoBackup.Models\VsoBackup.Models.csproj">
+      <Project>{5BED5D8B-5CED-4224-9853-A20A86A88838}</Project>
+      <Name>VsoBackup.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VsoBackup.Utilities\VsoBackup.Utilities.csproj">
+      <Project>{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}</Project>
+      <Name>VsoBackup.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VsoBackup.VisualStudioOnline\VsoBackup.VisualStudioOnline.csproj">
+      <Project>{E9392286-D88A-4C77-AB43-44E9F72A62AC}</Project>
+      <Name>VsoBackup.VisualStudioOnline</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
