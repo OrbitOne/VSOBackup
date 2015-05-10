@@ -17,7 +17,7 @@ namespace VsoBackupTool
                 try
                 {
                     backupService.Backup();
-                    logger.WriteLog("DONEg");
+                    logger.WriteLog("DONE");
                 }
                 catch (Exception ex)
                 {
