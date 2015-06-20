@@ -1,6 +1,4 @@
-﻿using VsoBackup.Models;
-
-namespace VsoBackup.Services
+﻿namespace VsoBackup.Services
 {
     public interface IFileSystemService
     {

@@ -1,6 +1,4 @@
-﻿using System.Configuration;
-
-namespace VsoBackup.Configuration
+﻿namespace VsoBackup.Configuration
 {
     public interface IVsoConfiguration
     {
