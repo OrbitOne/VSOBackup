@@ -28,8 +28,8 @@ namespace VsoBackup.VisualStudioOnline
                     new AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.ASCII.GetBytes(authenticationHeaderValue)));
 
                 var json = await GetAsync(client, url);
-                var test = JsonConvert.DeserializeObject<T>(json); // A variable test named?
-                return test;
+                var retVal = JsonConvert.DeserializeObject<T>(json); 
+                return retVal;
             }
         }
 
