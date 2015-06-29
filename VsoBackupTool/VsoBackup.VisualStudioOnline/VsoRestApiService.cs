@@ -22,31 +22,28 @@ namespace VsoBackup.VisualStudioOnline
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
-                    Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", _configuration.VsoConfiguration.ApiUsername, _configuration.VsoConfiguration.ApiPassword))));
+
+                var authenticationHeaderValue = string.Format("{0}:{1}", _configuration.VsoConfiguration.ApiUsername, _configuration.VsoConfiguration.ApiPassword);
+                client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.ASCII.GetBytes(authenticationHeaderValue)));
 
                 var json = await GetAsync(client, url);
-                var test = JsonConvert.DeserializeObject<T>(json);
+                var test = JsonConvert.DeserializeObject<T>(json); // A variable test named?
                 return test;
             }
         }
-      
 
-        static async Task<String> GetAsync(HttpClient client, String apiUrl)
+        private static async Task<String> GetAsync(HttpClient client, String apiUrl)
         {
-            var responseBody = "";
+            string responseBody;
 
-                using (HttpResponseMessage response = client.GetAsync(apiUrl).Result)
-                {
-                    response.EnsureSuccessStatusCode();
-                    responseBody = await response.Content.ReadAsStringAsync();
-                }
+            using (var response = await client.GetAsync(apiUrl))
+            {
+                response.EnsureSuccessStatusCode();
+                responseBody = await response.Content.ReadAsStringAsync();
+            }
 
             return responseBody;
         }
     }
 }
-
-
-

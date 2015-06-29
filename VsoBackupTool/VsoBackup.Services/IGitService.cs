@@ -1,5 +1,4 @@
 ﻿using VsoBackup.Models;
-using VsoBackup.VisualStudioOnline;
 
 namespace VsoBackup.Services
 {

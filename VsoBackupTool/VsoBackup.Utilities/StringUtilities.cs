@@ -1,9 +1,8 @@
 ﻿namespace VsoBackup.Utilities
 {
-    public  class StringUtilities
+    public class StringUtilities
     {
-
-        public static string FormatDateTeamProjectAndRepository(string today,string name, string repo)
+        public static string FormatDateTeamProjectAndRepository(string today, string name, string repo)
         {
             return today + @"\" + name + @"\" + repo;
         }
@@ -13,7 +12,7 @@
             return today + @"\" + clientName;
         }
 
-        public static bool EndsWith(string value,string character)
+        public static bool EndsWith(string value, string character)
         {
             return value.EndsWith(character);
         }

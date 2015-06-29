@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllConfiguration.cs" />
     <Compile Include="FileSystemConfiguration.cs" />
     <Compile Include="IAllConfiguration.cs" />
     <Compile Include="IFileSystemConfiguration.cs" />
