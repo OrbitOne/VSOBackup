@@ -3,7 +3,7 @@ This is our Visual Studio Online backup tool. You can find more info on our [blo
 
 We use the VSO Rest API  to query our VSO account and get all the data we need. Since in VSO you can only have one Team Project Collection, we retrieve all the team projects of the default collection. Each of these team projects can have multiple repositories that need to be backed up. A folder is created for each team project and saved to a location on disk that can be configured in the app.config. When the team project folder is created, the task loops over each repository in the team project and creates folders for each repository.
 
-<img>http://blogs.msdn.com/cfs-filesystemfile.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-54-43-metablogapi/1106.image_5F00_65A15B92.png</img>
+![alt tag](http://blogs.msdn.com/cfs-filesystemfile.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-54-43-metablogapi/1106.image_5F00_65A15B92.png)>
 
 
 The actual backing up of the repositories is done by using a clone url that we can get from the VSO REST Api.This URL looks just like the one you'd see on github, for example: https://orbitone.visualstudio.com/DefaultCollection/OrbitOne/_git/CrmDataAccess.
