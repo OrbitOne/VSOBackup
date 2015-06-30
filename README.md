@@ -11,8 +11,18 @@ To clone the repositories we use the libGit2Sharp library. Including this in you
 
 Important to note is that you need to have Alternative Credentials enabled in your VSO account. You need this to access the VSO Rest API and to clone repositories using the libGit2Sharp library. You can set these credentials by going to your profile in your VSO account.
 
-![alt tag](http://blog.orbitone.com/image.axd?picture=%2f2015%2f05%2falternate.png)
-
 On top of that, we also added a configurable key called "RemoveBackupAfterHowManyDays". With this key, we can decide for how long we want to retain the oldest backup. Right now we have this set 10 days, meaning that we will store a complete repository backup for only 10 days. After that, the backup will be deleted from disk.
+
+As mentioned before, we also made the path/location where to save these backups configurable. The REST Urls needed to query our VSO accounts are also configurable. For example, this is one of the URLs we use to get all our repositories.
+
+https://orbitone.visualstudio.com/DefaultCollection/_apis/git/repositories?api-version=1.0
+
+Having this hardcoded would not be that convenient, since
+
+    The api function's name might change
+    We might change our vso account, or use a different name
+
+By having this in the app.config, you can basically use this task as a backuptool for different VSO accounts. Just schedule another instance of the task with different settings, and you're good to go.
+By having these app settings, it enables you to quickly change some settings, without having to recompile or redeploy the application.
 
  
