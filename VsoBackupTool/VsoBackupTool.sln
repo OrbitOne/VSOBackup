@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{A36E63C5-89F
 		Assemblies\NativeBinaries\x86\git2-e0902fb.dll = Assemblies\NativeBinaries\x86\git2-e0902fb.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.Tests", "VsoBackup.Tests\VsoBackup.Tests.csproj", "{DEABAB00-59A0-45EF-895A-348BFC8622B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEABAB00-59A0-45EF-895A-348BFC8622B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEABAB00-59A0-45EF-895A-348BFC8622B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEABAB00-59A0-45EF-895A-348BFC8622B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEABAB00-59A0-45EF-895A-348BFC8622B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

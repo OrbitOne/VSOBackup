@@ -41,7 +41,7 @@ namespace VsoBackup.Services
             }
 
             var days = _allConfiguration.FileSystemConfiguration.RemoveBackupAfterHowManyDays;
-            var pastFolderDate = DateTime.Now.AddDays(-days).ToString(Constants.Today);
+            var pastFolderDate = DateTime.Now.AddDays(-days).ToString("dd-MM-yyyy");
 
             if (_fileSystemService.FolderExists(Constants.Today))
             {
