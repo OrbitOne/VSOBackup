@@ -20,6 +20,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsoBackup.Logging", "VsoBackup.Logging\VsoBackup.Logging.csproj", "{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{4964DB98-6EFF-4875-98BE-691F991DD0D4}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\OrbitOne.Base.ScheduledTask.dll = Assemblies\OrbitOne.Base.ScheduledTask.dll
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NativeBinaries", "NativeBinaries", "{40660A8E-A593-4418-8DC1-13C3869BFD32}"
 EndProject

@@ -7,22 +7,30 @@ namespace VsoBackupTool
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static int Main(string[] args)
         {
-            var bootstrapper = new Bootstrapper().BootstrapContainer();
-            var backupService = bootstrapper.Resolve<ISourceControlBackupService>();
-            var logger = bootstrapper.Resolve<ILogger>();
+            var taskInvoker = new OrbitOne.Base.ScheduledTask.ScheduledTaskInvoker();
 
-            try
+           var result = taskInvoker.RunTask(() =>
             {
-                backupService.Backup();
-                logger.WriteLog("DONE");
-            }
-            catch (Exception ex)
-            {
-                logger.WriteLog(ex.ToString());
-                throw;
-            }
+                var bootstrapper = new Bootstrapper().BootstrapContainer();
+                var backupService = bootstrapper.Resolve<ISourceControlBackupService>();
+                var logger = bootstrapper.Resolve<ILogger>();
+
+                try
+                {
+                    backupService.Backup();
+                    logger.WriteLog("DONE");
+                }
+                catch (Exception ex)
+                {
+                    logger.WriteLog(ex.ToString());
+                    throw;
+                }
+
+            });
+            return result.Status;
+
         }
     }
 }
