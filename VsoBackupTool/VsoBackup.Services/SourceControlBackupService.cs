@@ -55,7 +55,11 @@ namespace VsoBackup.Services
                 _fileSystemService.DeleteFolder(pastFolderDate);
             }
 
-            var all = _apiService.ExecuteRequest<RootObject>(_allConfiguration.VsoConfiguration.AllRepositoriesUrl).Result.value; // Accessing Task in a blocking manner, potential deadlock.
+            var task = _apiService.ExecuteRequest<RootObject>(_allConfiguration.VsoConfiguration.AllRepositoriesUrl);
+            task.Wait(new TimeSpan(0, 0, 30));
+            var result = task.Result;
+
+            var all = result.value;
             var groupedByTeamProject = all.GroupBy(m => m.project.name).ToList();
 
             _logger.WriteLog("Fetched {0} team projects from VSO", groupedByTeamProject.Count);
